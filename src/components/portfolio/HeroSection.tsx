@@ -37,16 +37,21 @@ const HeroSection = () => {
               <br />
               <span className="gradient-text">I'm Amal Sankar K R</span>
             </motion.h1>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.35 }} className="flex flex-wrap justify-center lg:justify-start gap-2">
-              {["Computer Science Student", "Prompt Engineer", "AI & Data Analytics Learner"].map((tag, i) => (
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.35 }} className="flex flex-wrap justify-center lg:justify-start gap-3">
+              {[
+                { label: "Computer Science Student", emoji: "🎓" },
+                { label: "Prompt Engineer", emoji: "⚡" },
+                { label: "AI & Data Analytics Learner", emoji: "🤖" },
+              ].map((tag, i) => (
                 <motion.span
-                  key={tag}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
-                  className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-sm font-medium"
+                  key={tag.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 + i * 0.15 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-4 py-2 rounded-full bg-card border border-border text-foreground text-sm font-semibold card-shadow hover:card-shadow-hover transition-shadow duration-300 cursor-default"
                 >
-                  {tag}
+                  {tag.emoji} {tag.label}
                 </motion.span>
               ))}
             </motion.div>
