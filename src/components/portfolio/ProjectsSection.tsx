@@ -1,5 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
-import { Bot, ExternalLink } from "lucide-react";
+import { Bot } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ProjectsSection = () => (
@@ -22,10 +22,8 @@ const ProjectsSection = () => (
           </div>
         </div>
         <div className="p-6 space-y-3">
-          <div className="flex items-center gap-2">
-            <h3 className="font-display font-bold text-xl">AI-Based Python Tutoring Website</h3>
-            <ExternalLink size={16} className="text-muted-foreground" />
-          </div>
+          <h3 className="font-display font-bold text-xl">AI-Based Python Tutoring Website</h3>
+          <span className="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">🚧 In Development</span>
           <p className="text-muted-foreground leading-relaxed">
             A web platform designed to help learners understand Python programming using AI-powered explanations and tutoring assistance.
           </p>
