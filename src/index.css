@@ -83,6 +83,8 @@
   }
   .hero-bg {
     background-image: var(--gradient-hero-bg);
+    background-size: 300% 300%;
+    animation: hero-gradient-shift 12s ease-in-out infinite;
   }
   .card-shadow {
     box-shadow: var(--shadow-card);
