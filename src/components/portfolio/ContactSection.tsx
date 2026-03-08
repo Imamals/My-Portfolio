@@ -40,7 +40,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">{c.label}</p>
-                  <p className="text-sm font-medium">{c.value}</p>
+                  <a href={c.href} target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary transition-colors">{c.value}</a>
                 </div>
               </motion.div>
             );
