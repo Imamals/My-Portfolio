@@ -1,5 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
-import { Lightbulb, Network, Heart, ShieldCheck } from "lucide-react";
+import { Lightbulb, Heart, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const experiences = [
