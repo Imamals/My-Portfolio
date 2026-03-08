@@ -33,7 +33,9 @@ const HeroSection = () => {
               👋 Welcome to my portfolio
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Hi, I'm <span className="gradient-text">Amal Sankar K R</span>
+              Hi,
+              <br />
+              <span className="gradient-text">I'm Amal Sankar K R</span>
             </motion.h1>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.35 }} className="flex flex-wrap justify-center lg:justify-start gap-2">
               {["Computer Science Student", "Prompt Engineer", "AI & Data Analytics Learner"].map((tag, i) => (
