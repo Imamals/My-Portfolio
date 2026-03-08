@@ -22,7 +22,12 @@ const ProjectsSection = () => (
           </div>
         </div>
         <div className="p-6 space-y-3">
-          <h3 className="font-display font-bold text-xl">AI-Based Python Tutoring Website</h3>
+          <div className="flex items-center justify-between">
+            <h3 className="font-display font-bold text-xl">AI-Based Python Tutoring Website</h3>
+            <a href="https://github.com/Imamals/sensei.py.git" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <ExternalLink size={18} />
+            </a>
+          </div>
           <span className="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">🚧 In Development</span>
           <p className="text-muted-foreground leading-relaxed">
             A web platform designed to help learners understand Python programming using AI-powered explanations and tutoring assistance.
