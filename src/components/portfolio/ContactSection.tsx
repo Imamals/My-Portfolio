@@ -5,10 +5,9 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 
 const contacts = [
-  { icon: Mail, label: "Email", value: "your.email@example.com" },
-  { icon: Phone, label: "Phone", value: "+91 XXXXX XXXXX" },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/amalsankar" },
-  { icon: Github, label: "GitHub", value: "github.com/amalsankar" },
+  { icon: Mail, label: "Email", value: "amlsankar008@gmail.com", href: "mailto:amlsankar008@gmail.com" },
+  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/amal-sankar", href: "https://www.linkedin.com/in/amal-sankar" },
+  { icon: Github, label: "GitHub", value: "github.com/Imamals", href: "https://github.com/Imamals" },
 ];
 
 const ContactSection = () => {
