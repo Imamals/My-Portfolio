@@ -75,7 +75,7 @@ const HeroSection = () => {
                   whileHover={{ scale: 1.05, y: -3 }}
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-card border border-border text-foreground text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
                 >
-                  <span className="opacity-60 text-base">{tag.emoji}</span>
+                  <span className="text-base grayscale opacity-70">{tag.emoji}</span>
                   {tag.label}
                 </motion.span>
               ))}
