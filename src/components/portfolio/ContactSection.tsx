@@ -15,7 +15,10 @@ const ContactSection = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
+    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    window.open(`mailto:amlsankar008@gmail.com?subject=${subject}&body=${body}`, "_blank");
+    toast.success("Opening your email client...");
     setForm({ name: "", email: "", message: "" });
   };
 
