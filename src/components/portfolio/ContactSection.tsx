@@ -1,6 +1,6 @@
 import { useState, FormEvent } from "react";
 import SectionWrapper from "./SectionWrapper";
-import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 
