@@ -54,8 +54,6 @@ const HeroSection = () => {
               <br />
               <span className="gradient-text">I'm Amal Sankar K R</span>
             </motion.h1>
-              </span>
-            </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
