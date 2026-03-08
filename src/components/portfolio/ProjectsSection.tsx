@@ -24,7 +24,6 @@ const ProjectsSection = () => (
         <div className="p-6 space-y-3">
           <h3 className="font-display font-bold text-xl">AI-Based Python Tutoring Website</h3>
           <span className="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">🚧 In Development</span>
-          </div>
           <p className="text-muted-foreground leading-relaxed">
             A web platform designed to help learners understand Python programming using AI-powered explanations and tutoring assistance.
           </p>
