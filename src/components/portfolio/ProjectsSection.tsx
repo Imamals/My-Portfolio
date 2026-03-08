@@ -23,7 +23,7 @@ const ProjectsSection = () => (
         </div>
         <div className="p-6 space-y-3">
           <div className="flex items-center justify-between">
-            <h3 className="font-display font-bold text-xl">AI-Based Python Tutoring Website</h3>
+            <h3 className="font-display font-bold text-xl">sensei.py</h3>
             <a href="https://sensei-py.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <ExternalLink size={18} />
             </a>
