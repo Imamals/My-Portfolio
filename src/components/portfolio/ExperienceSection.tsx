@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
   { title: "IEDC Co-Lead", org: "IEDC SNMIMT", period: "2025 – Present", icon: Lightbulb },
-  { title: "First Year Student Coordinator", org: "TinkerHub SNMIMT", period: "2025 – Present", icon: Network },
+  { title: "First Year Student Coordinator", org: "TinkerHub SNMIMT", period: "2025 – Present", icon: Lightbulb },
   { title: "NSS Volunteer Leader", org: "SNMHSS Moothakunnam", period: "2022 – 2024", icon: Heart },
   { title: "Student Police Cadet", org: "GHSS Pullut", period: "", icon: ShieldCheck },
 ];
