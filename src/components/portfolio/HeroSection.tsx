@@ -1,4 +1,4 @@
-import profileImg from "@/assets/profile-placeholder.png";
+import profileImg from "@/assets/profile-photo.jpg";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
