@@ -1,6 +1,7 @@
 import SectionWrapper from "./SectionWrapper";
-import { Bot, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import pythonLogo from "@/assets/python-logo.png";
 
 const ProjectsSection = () => (
   <SectionWrapper id="projects" title="Projects">
@@ -11,12 +12,13 @@ const ProjectsSection = () => (
         transition={{ duration: 0.3 }}
       >
         <div className="h-48 gradient-bg flex items-center justify-center relative overflow-hidden">
-          <motion.div
+          <motion.img
+            src={pythonLogo}
+            alt="Python programming language"
+            className="w-20 h-20 object-contain"
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Bot size={64} className="text-primary-foreground/80" />
-          </motion.div>
+          />
           <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-card/20 backdrop-blur-sm text-primary-foreground text-xs font-medium">
             🚧 Currently Building
           </div>
