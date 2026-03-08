@@ -39,7 +39,7 @@
     --gradient-primary: linear-gradient(135deg, hsl(220, 90%, 56%), hsl(260, 60%, 60%));
     --gradient-primary-hover: linear-gradient(135deg, hsl(220, 90%, 50%), hsl(260, 60%, 54%));
     --gradient-subtle: linear-gradient(135deg, hsl(220, 90%, 97%), hsl(260, 60%, 97%));
-    --gradient-hero-bg: radial-gradient(ellipse at 30% 20%, hsl(220, 90%, 96%) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, hsl(260, 60%, 96%) 0%, transparent 50%);
+    --gradient-hero-bg: linear-gradient(135deg, hsl(220, 90%, 97%) 0%, hsl(260, 60%, 97%) 25%, hsl(200, 80%, 97%) 50%, hsl(280, 50%, 97%) 75%, hsl(220, 90%, 97%) 100%);
     --shadow-card: 0 1px 3px hsl(220 20% 10% / 0.04), 0 4px 12px hsl(220 20% 10% / 0.03);
     --shadow-card-hover: 0 4px 16px hsl(220 20% 10% / 0.08), 0 8px 32px hsl(220 20% 10% / 0.04);
     --shadow-glow: 0 0 20px hsl(220, 90%, 56%, 0.15);
@@ -83,6 +83,8 @@
   }
   .hero-bg {
     background-image: var(--gradient-hero-bg);
+    background-size: 300% 300%;
+    animation: hero-gradient-shift 12s ease-in-out infinite;
   }
   .card-shadow {
     box-shadow: var(--shadow-card);
@@ -110,6 +112,12 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
+}
+
+@keyframes hero-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes scroll-progress {
