@@ -1,5 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
-import { Bot } from "lucide-react";
+import { Bot, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ProjectsSection = () => (
