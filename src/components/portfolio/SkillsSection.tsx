@@ -1,5 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import { Code2, Brain, Palette, Terminal, FileCode, Lightbulb, MessageSquare, Clock, Users, Zap, Target, Layers } from "lucide-react";
+import { motion } from "framer-motion";
 
 const technical = [
   { name: "Python", icon: Terminal },
@@ -20,13 +21,24 @@ const soft = [
   { name: "Time Management", icon: Clock },
 ];
 
-const SkillCard = ({ name, icon: Icon }: { name: string; icon: typeof Code2 }) => (
-  <div className="flex flex-col items-center gap-3 p-5 bg-card rounded-xl card-shadow hover:card-shadow-hover hover:-translate-y-1 transition-all duration-300 group">
-    <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center group-hover:gradient-bg transition-colors duration-300">
+const SkillCard = ({ name, icon: Icon, index }: { name: string; icon: typeof Code2; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20, scale: 0.9 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.4, delay: index * 0.05 }}
+    whileHover={{ y: -5, boxShadow: "0 8px 25px hsl(220 20% 10% / 0.08)" }}
+    className="flex flex-col items-center gap-3 p-5 bg-card rounded-xl card-shadow group cursor-default"
+  >
+    <motion.div
+      className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center group-hover:gradient-bg transition-colors duration-300"
+      whileHover={{ rotate: 10, scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
       <Icon size={22} className="text-accent-foreground group-hover:text-primary-foreground transition-colors duration-300" />
-    </div>
+    </motion.div>
     <span className="text-sm font-medium text-center">{name}</span>
-  </div>
+  </motion.div>
 );
 
 const SkillsSection = () => (
@@ -35,13 +47,13 @@ const SkillsSection = () => (
       <div>
         <h3 className="font-display font-semibold text-lg mb-5 text-center">Technical Skills</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {technical.map((s) => <SkillCard key={s.name} {...s} />)}
+          {technical.map((s, i) => <SkillCard key={s.name} {...s} index={i} />)}
         </div>
       </div>
       <div>
         <h3 className="font-display font-semibold text-lg mb-5 text-center">Soft Skills</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {soft.map((s) => <SkillCard key={s.name} {...s} />)}
+          {soft.map((s, i) => <SkillCard key={s.name} {...s} index={i} />)}
         </div>
       </div>
     </div>

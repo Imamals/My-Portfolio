@@ -1,5 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
-import { BookOpen, Brain, BarChart3, Code2, Globe, Wand2 } from "lucide-react";
+import { Brain, BarChart3, Code2, Globe, Wand2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const items = [
   { text: "Artificial Intelligence fundamentals", icon: Brain },
@@ -15,12 +16,24 @@ const LearningSection = () => (
       {items.map((item, i) => {
         const Icon = item.icon;
         return (
-          <div key={i} className="flex items-center gap-4 bg-card rounded-xl p-4 card-shadow hover:card-shadow-hover hover:-translate-y-0.5 transition-all duration-300">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+            whileHover={{ y: -3 }}
+            className="flex items-center gap-4 bg-card rounded-xl p-4 card-shadow hover:card-shadow-hover transition-shadow duration-300"
+          >
+            <motion.div
+              className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0"
+              whileHover={{ rotate: 15 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Icon size={18} className="text-accent-foreground" />
-            </div>
+            </motion.div>
             <span className="text-sm font-medium">{item.text}</span>
-          </div>
+          </motion.div>
         );
       })}
     </div>

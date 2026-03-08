@@ -1,6 +1,7 @@
 import SectionWrapper from "./SectionWrapper";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { GraduationCap } from "lucide-react";
+import { motion } from "framer-motion";
 
 const education = [
   { degree: "B.Tech Computer Science and Engineering", school: "SNM Institute of Management and Technology (SNMIMT), Maliankara", uni: "APJ Abdul Kalam Technological University", year: "2025 – 2029" },
@@ -11,19 +12,27 @@ const education = [
 const TimelineItem = ({ item, index }: { item: typeof education[0]; index: number }) => {
   const { ref, isVisible } = useScrollAnimation(0.2);
   return (
-    <div ref={ref} className={`relative pl-10 pb-10 last:pb-0 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`} style={{ transitionDelay: `${index * 150}ms` }}>
-      {/* Line */}
-      <div className="absolute left-[15px] top-8 bottom-0 w-0.5 bg-border last:hidden" />
-      {/* Dot */}
-      <div className="absolute left-0 top-1 w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+    <div ref={ref} className="relative pl-10 pb-10 last:pb-0">
+      <div className="absolute left-[15px] top-8 bottom-0 w-0.5 bg-border" />
+      <motion.div
+        className="absolute left-0 top-1 w-8 h-8 rounded-full gradient-bg flex items-center justify-center"
+        initial={{ scale: 0 }}
+        animate={isVisible ? { scale: 1 } : {}}
+        transition={{ duration: 0.4, delay: index * 0.15, type: "spring", stiffness: 200 }}
+      >
         <GraduationCap size={16} className="text-primary-foreground" />
-      </div>
-      <div className="bg-card rounded-xl p-5 card-shadow hover:card-shadow-hover transition-shadow duration-300">
+      </motion.div>
+      <motion.div
+        className="bg-card rounded-xl p-5 card-shadow hover:card-shadow-hover hover:-translate-y-0.5 transition-all duration-300"
+        initial={{ opacity: 0, x: -30 }}
+        animate={isVisible ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.5, delay: index * 0.15 + 0.1 }}
+      >
         <span className="text-xs font-semibold text-primary">{item.year}</span>
         <h3 className="font-display font-bold text-lg mt-1">{item.degree}</h3>
         <p className="text-muted-foreground text-sm">{item.school}</p>
         {item.uni && <p className="text-muted-foreground text-xs mt-1">{item.uni}</p>}
-      </div>
+      </motion.div>
     </div>
   );
 };
