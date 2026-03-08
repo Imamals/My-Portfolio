@@ -1,5 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
-import profileImg from "@/assets/profile-placeholder.png";
+import profileImg from "@/assets/profile-photo.jpg";
 
 const AboutSection = () => (
   <SectionWrapper id="about" title="About Me">
